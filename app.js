@@ -1,16 +1,23 @@
 // import functions
-
+import { add } from './calculations.js';
 // reference needed DOM elements
-const addXInput = document.getElementById("add-x-input");
-const addYInput = document.getElementById("add-y-input");
-const addButton = document.getElementById("add-button");
-const addResult = document.getElementById("add-result");
+const addXInput = document.getElementById('add-x-input');
+const addYInput = document.getElementById('add-y-input');
+const addButton = document.getElementById('add-button');
+const addResult = document.getElementById('add-result');
 
 // console.log(addXInput, addYInput, addButton, addResult);
 
 // set event listeners 
 addButton.addEventListener('click', () => {
-  console.log('add button clicked');
+    const x = Number(addXInput.value);
+    const y = Number(addYInput.value);
+
+    const sum = add(x, y);
+ 
+
+    addResult.textContent = sum;
+  
 });
   // get user input(s)
   // do any needed work with the value(s)
