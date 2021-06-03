@@ -1,5 +1,5 @@
 // import functions
-import { add, subtract, multiply, divide } from './calculations.js';
+import { add, subtract, multiply, divide, squareroot } from './calculations.js';
 // reference needed DOM elements
 const addXInput = document.getElementById('add-x-input');
 const addYInput = document.getElementById('add-y-input');
@@ -21,9 +21,11 @@ const divideYInput = document.getElementById('divide-y-input');
 const divideButton = document.getElementById('divide-button');
 const divideResult = document.getElementById('divide-result');
 
-// console.log(addXInput, addYInput, addButton, addResult);
+const squarerootXInput = document.getElementById('squareroot-x-input');
+const squarerootButton = document.getElementById('squareroot-button');
+const squarerootResult = document.getElementById('squareroot-result');
 
-// set event listeners 
+
 addButton.addEventListener('click', () => {
     const x = Number(addXInput.value);
     const y = Number(addYInput.value);
@@ -34,9 +36,7 @@ addButton.addEventListener('click', () => {
     addResult.textContent = sum;
   
 });
-  // get user input(s)
-  // do any needed work with the value(s)
-  // update DOM to reflect new value(s)
+  
 subtractButton.addEventListener('click', () => {
     const x = Number(subtractXInput.value);
     const y = Number(subtractYInput.value);
@@ -65,4 +65,10 @@ divideButton.addEventListener('click', () => {
 
     divideResult.textContent = quotient;
 
+});
+squarerootButton.addEventListener('click', () =>{
+
+    const x = Number(squarerootXInput.value);
+    const answer = squareroot(x);
+    squarerootResult.textContent = answer;
 });

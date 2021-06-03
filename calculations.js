@@ -12,3 +12,7 @@ export function multiply(x, y){
 export function divide(x, y){
     return x / y;
 }
+
+export function squareroot(x){
+    return Math.sqrt (x);
+}
